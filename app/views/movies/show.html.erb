@@ -1,0 +1,13 @@
+<!--<p style="color: green"><%= notice %></p>-->
+
+<%= render @movie %>
+
+<div>
+  <%= link_to "Edit", edit_movie_path(@movie), class:"btn btn-warning" %> 
+  <%= link_to "Back", movies_path, class:"btn btn-secondary" %> 
+  </div>
+<br>
+<div>
+  <%= button_to "Delete this movie", @movie, method: :delete, data: {turbo_confirm: 'Are you sure?'}, class:"btn btn-danger" %>
+</div>
+

@@ -1,0 +1,24 @@
+<!--<p style="color: green"><%= notice %></p>-->
+
+<!-- Jumbotron -->
+<div class="p-4 shadow-4 rounded-3" style="background-color: hsl(0, 0%, 94%);">
+  <h2>Show Client</h2>
+  <p>
+    <%= render @client %>
+  </p>
+
+  <hr class="my-4" />
+
+  <div>
+    <%= link_to "Edit", edit_client_path(@client), class:"btn btn-warning" %> 
+    <%= link_to "Back", clients_path, class:"btn btn-secondary" %>
+  </div>
+  <br>
+  <div>
+    <%= button_to "Delete this client", @client, method: :delete, data: {turbo_confirm: 'Are you sure?'}, class:"btn btn-danger" %>
+  </div>
+</div>
+<!-- Jumbotron -->
+
+
+
